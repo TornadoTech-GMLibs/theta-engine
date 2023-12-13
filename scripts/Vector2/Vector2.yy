@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Vector2",
-    "path": "folders/Scripts/Libs/Vector2.yy",
+    "path": "folders/__ ENGINE __/Scripts/Libs/Vector2.yy",
   },
 }

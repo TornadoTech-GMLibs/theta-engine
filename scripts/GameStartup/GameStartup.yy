@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "Tree",
+  "name": "GameStartup",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Tree",
-    "path": "folders/__ ENGINE __/Scripts/Libs/Tree.yy",
+    "name": "Events",
+    "path": "folders/__ ENGINE __/Scripts/Events.yy",
   },
 }

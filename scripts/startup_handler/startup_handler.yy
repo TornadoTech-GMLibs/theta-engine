@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "Tree",
+  "name": "startup_handler",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Tree",
-    "path": "folders/__ ENGINE __/Scripts/Libs/Tree.yy",
+    "name": "Scripts",
+    "path": "folders/Scripts.yy",
   },
 }
