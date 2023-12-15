@@ -19,10 +19,10 @@
     {"name":"Vector2","order":2,"path":"folders/__ ENGINE __/Scripts/Libs/Vector2.yy",},
     {"name":"Event","order":3,"path":"folders/__ ENGINE __/Scripts/Libs/Event.yy",},
     {"name":"__ ENGINE __","order":16,"path":"folders/__ ENGINE __.yy",},
-    {"name":"Scripts","order":1,"path":"folders/__ ENGINE __/Scripts.yy",},
-    {"name":"Objects","order":2,"path":"folders/__ ENGINE __/Objects.yy",},
-    {"name":"Rooms","order":3,"path":"folders/__ ENGINE __/Rooms.yy",},
+    {"name":"Objects","order":1,"path":"folders/__ ENGINE __/Objects.yy",},
+    {"name":"Rooms","order":2,"path":"folders/__ ENGINE __/Rooms.yy",},
     {"name":"Events","order":2,"path":"folders/__ ENGINE __/Scripts/Events.yy",},
+    {"name":"Exception","order":4,"path":"folders/__ ENGINE __/Scripts/Libs/Exception.yy",},
   ],
   "ResourceOrderSettings": [],
 }
