@@ -75,3 +75,8 @@ function ObjectIndentityException(reference, parent) : Exception() constructor {
 	message = $"{object_get_name(reference)} must be inherited from {object_get_name(parent)}";
 	init();
 }
+
+// TODO: made exception
+function NullReferenceException() : Exception() constructor {
+	init();
+}
