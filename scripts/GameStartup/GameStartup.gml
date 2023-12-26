@@ -6,8 +6,8 @@ global.__engine_event_on_game_startup = new Event();
 __engine_on_game_startup.connect(function() {
 	show_debug_message("Hello from Engine!");
 	
-	scribble_font_set_default("font_determination");
-	scribble_font_bake_outline_8dir("font_determination", "font_determination_outline", c_black, false);
+	scribble_startup();
+	input_startup();
 });
 
 // Forwards an engine event for processing in the game itself

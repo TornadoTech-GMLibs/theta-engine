@@ -9,7 +9,7 @@ buttons_x /= 2;
 for (var i = 0; i < array_length(buttons); i++) {
 	var button = buttons[i];
 	var position = new Vector2(buttons_x + buttons_offset_x * i + 116 * i, buttons_y);
-	var selected = true; //_input.selected_button == i && encouter.state == encouter_state.selecting;
+	var selected = input.selected_button == i; // && encouter.state == encouter_state.selecting;
 	
 	button.draw(id, position, selected);
 }

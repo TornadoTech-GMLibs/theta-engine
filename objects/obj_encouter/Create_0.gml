@@ -27,8 +27,12 @@ player = new EncouterPlayer("Tornado", 1, 20, 20, 0, 0, [
 
 buttons = [
 	new EncouterButtonFight(),
+	new EncouterButtonFight(),
+	new EncouterButtonAct(),
 	new EncouterButtonAct(),
 	new EncouterButtonItem(),
+	new EncouterButtonItem(),
+	new EncouterButtonMercy(),
 	new EncouterButtonMercy(),
 ];
 
