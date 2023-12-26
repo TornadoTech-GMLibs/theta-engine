@@ -1,4 +1,4 @@
-/// @param {Asset.GMObject} object
+    /// @param {Asset.GMObject} object
 /// @return {Id.Instance}
 create_component = function(object) {
 	if (object == obj_encouter_component) {
@@ -21,10 +21,16 @@ create_enemies = function() {
 	}
 }
 
-
 player = new EncouterPlayer("Tornado", 1, 20, 20, 0, 0, [
 	new EncouterItem("Test", 10),
 ]);
+
+buttons = [
+	new EncouterButtonFight(),
+	new EncouterButtonAct(),
+	new EncouterButtonItem(),
+	new EncouterButtonMercy(),
+];
 
 enemies = [];
 enemies_instance = [];
@@ -35,4 +41,3 @@ background = create_component(obj_encouter_background); // Creates and animates 
 arena = create_component(obj_encouter_arena);
 hud = create_component(obj_encouter_hud); // All graphical display (UI) except dialogs and battles
 fight = create_component(obj_encouter_fight); // Component of the current battle
-

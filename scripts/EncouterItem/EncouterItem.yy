@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Encouter",
-    "path": "folders/__ ENGINE __/Scripts/Encouter.yy",
+    "name": "Data",
+    "path": "folders/__ ENGINE __/Scripts/Encouter/Data.yy",
   },
 }
