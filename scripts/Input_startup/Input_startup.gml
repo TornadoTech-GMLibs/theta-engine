@@ -5,6 +5,8 @@ enum input_source {
 	down,
 	left,
 	right,
+	select,
+	skip,
 	invetory,
 }
 
@@ -51,6 +53,16 @@ function input_startup() {
 		new Key(device_type.keyboard, vk_right),
 		new Key(device_type.keyboard, "D"),
 		new Key(device_type.gamepad, gp_padr),
+	]);
+	
+	input_bind(input_source.select, [
+		new Key(device_type.keyboard, vk_enter),
+		new Key(device_type.keyboard, "C"),
+	]);
+	
+	input_bind(input_source.skip, [
+		new Key(device_type.keyboard, vk_shift),
+		new Key(device_type.keyboard, "X"),
 	]);
 
 	input_bind(input_source.invetory, [

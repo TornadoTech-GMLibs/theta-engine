@@ -2,12 +2,15 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "obj_encouter_arena",
-  "eventList": [],
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
+  ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Components",
-    "path": "folders/__ ENGINE __/Objects/Encouter/Components.yy",
+    "name": "Arena",
+    "path": "folders/__ ENGINE __/Objects/Encouter/Components/Arena.yy",
   },
   "parentObjectId": {
     "name": "obj_encouter_component",
@@ -28,7 +31,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_encouter_arena_box",
+    "path": "sprites/spr_encouter_arena_box/spr_encouter_arena_box.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }
