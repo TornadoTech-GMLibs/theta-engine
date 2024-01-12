@@ -1,3 +1,5 @@
+event_inherited();
+
 depth = encouter_depth.text;
 
 input = encouter.input;
@@ -12,7 +14,7 @@ text_offset_y = 12;
 // Typist for text
 typist = scribble_typist();
 typist.in(0.5, 0);
-// typist.sound_per_char(snd_voice_main, 1, 1);
+typist.sound_per_char(snd_voice_main, 1, 1);
 typist.character_delay_add("!", 250);
 typist.character_delay_add("?", 250);
 typist.character_delay_add(".", 200);

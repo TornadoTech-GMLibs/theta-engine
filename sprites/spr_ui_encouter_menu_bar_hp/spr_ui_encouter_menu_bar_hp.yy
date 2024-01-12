@@ -26,7 +26,7 @@
   "origin": 3,
   "parent": {
     "name": "Enemy",
-    "path": "folders/__ ENGINE __/Sprites/Encouter/HUD/Bar/Enemy.yy",
+    "path": "folders/__Engine__/Sprites/Encouter/HUD/Bar/Enemy.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

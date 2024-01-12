@@ -9,7 +9,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Encouter",
-    "path": "folders/__ ENGINE __/Objects/Encouter.yy",
+    "path": "folders/__Engine__/Objects/Encouter.yy",
   },
   "parentObjectId": null,
   "persistent": false,

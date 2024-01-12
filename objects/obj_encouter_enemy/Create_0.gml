@@ -4,6 +4,8 @@ hp_max = 100;
 
 defense = 1;
 
+actions = [];
+
 /// @param {Real} damage
 hurt = function(damage) {
 	var _damage = max(damage - defense, 0);

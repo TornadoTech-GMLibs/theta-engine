@@ -2,12 +2,14 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "obj_encouter_component",
-  "eventList": [],
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+  ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
     "name": "Encouter",
-    "path": "folders/__ ENGINE __/Objects/Encouter.yy",
+    "path": "folders/__Engine__/Objects/Encouter.yy",
   },
   "parentObjectId": null,
   "persistent": false,

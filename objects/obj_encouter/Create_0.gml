@@ -1,3 +1,5 @@
+#region Methods
+
 /// @param {Asset.GMObject} object
 /// @return {Id.Instance}
 create_component = function(object) {
@@ -21,6 +23,16 @@ create_enemies = function() {
 	}
 }
 
+set_dialogue = function(dialogue) {
+	instance_create(obj_encouter_dialogue, {
+		encouter: id,
+		dialogue: dialogue,
+		state: state,
+	});
+	
+	set_state(encouter_state.encouter_dialogue);
+}
+
 /// @param {Real} target
 /// @param {Real} damage
 enemy_hurt = function(target, damage) {
@@ -32,11 +44,29 @@ set_state = function(index) {
 	state = index;
 }
 
+start_fight = function() {
+	set_state(encouter_state.fight);
+	fight.start();
+}
+
+#endregion
+#region Events
+
 on_attack_end = function() {
 	set_state(encouter_state.enemy_dialogue);
 	// enemies[0].create_dialogue_bubble();
 	arena.set_size_dialogue();
 }
+
+on_dialogue_end = function(state) {
+	set_state(state);
+}
+
+on_enemy_dialogue_end = function() {
+	start_fight();
+}
+
+#endregion
 
 player = new EncouterPlayer("Tornado", 1, 20, 20, 0, 0, [
 	new EncouterItem("Test", 10),
@@ -47,6 +77,23 @@ buttons = [
 	new EncouterButtonAct(),
 	new EncouterButtonItem(),
 	new EncouterButtonMercy(),
+];
+
+// The list of actions displayed in the mercy menu
+mercy_actions = [
+	EncouterAction("Mercy", function(encouter) {
+		array_foreach(enemies_instance, function(enemy) {
+			enemy.on_mercy();
+		});
+	}),
+	EncouterAction("Flee", function(encouter) {
+		encouter.set_dialogue([
+			"* You try to run as hard as you can...",
+	        "* But besides, the developers did not foresee such a development of events",
+	        "* You stayed in the battle, [c_red]Хе-хе!",
+			"* [speed: 0.5]B R U H", // Bruh moment
+		]);
+	}),
 ];
 
 

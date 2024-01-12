@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Key",
-    "path": "folders/__ ENGINE __/Scripts/Libs/Input/System/Key.yy",
+    "path": "folders/__Engine__/Scripts/Libs/Input/System/Key.yy",
   },
 }

@@ -120,7 +120,7 @@
   "maintainGms1Font": false,
   "parent": {
     "name": "(System - don't call these functions)",
-    "path": "folders/__ ENGINE __/Scripts/Libs/Scribble/(System - don't call these functions).yy",
+    "path": "folders/__Engine__/Scripts/Libs/Scribble/(System - don't call these functions).yy",
   },
   "pointRounding": 0,
   "ranges": [

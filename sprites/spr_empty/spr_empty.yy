@@ -26,7 +26,7 @@
   "origin": 0,
   "parent": {
     "name": "Sprites",
-    "path": "folders/__ ENGINE __/Sprites.yy",
+    "path": "folders/__Engine__/Sprites.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Data",
-    "path": "folders/__ ENGINE __/Scripts/Encouter/Data.yy",
+    "path": "folders/__Engine__/Scripts/Encouter/Data.yy",
   },
 }

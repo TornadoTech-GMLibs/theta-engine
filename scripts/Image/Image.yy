@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Image",
-    "path": "folders/__ ENGINE __/Scripts/Libs/Image.yy",
+    "path": "folders/__Engine__/Scripts/Libs/Image.yy",
   },
 }

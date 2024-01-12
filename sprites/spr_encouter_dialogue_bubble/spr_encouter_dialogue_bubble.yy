@@ -49,7 +49,7 @@
   "origin": 3,
   "parent": {
     "name": "HUD",
-    "path": "folders/__ ENGINE __/Sprites/Encouter/HUD.yy",
+    "path": "folders/__Engine__/Sprites/Encouter/HUD.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

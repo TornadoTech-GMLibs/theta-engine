@@ -26,7 +26,7 @@
   "origin": 4,
   "parent": {
     "name": "Arena",
-    "path": "folders/__ ENGINE __/Sprites/Encouter/Arena.yy",
+    "path": "folders/__Engine__/Sprites/Encouter/Arena.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

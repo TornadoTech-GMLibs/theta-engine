@@ -1,0 +1,9 @@
+Take from "Facing Demons - Chara Battle (DEVILOVANIA)" (https://gamejolt.com/games/igb_dv/343813):
+- spr_ui_encouter_button_act
+- spr_ui_encouter_button_fight
+- spr_ui_encouter_button_item
+- spr_ui_encouter_button_mercy
+- spr_ui_encouter_button_soul
+- spr_encouter_dialogue_bubble
+- spr_ui_encouter_target
+- spr_ui_encouter_target_pointer

@@ -4,7 +4,7 @@
   "name": "__shd_scribble",
   "parent": {
     "name": "Shaders",
-    "path": "folders/__ ENGINE __/Scripts/Libs/Scribble/(System - don't call these functions)/Shaders.yy",
+    "path": "folders/__Engine__/Scripts/Libs/Scribble/(System - don't call these functions)/Shaders.yy",
   },
   "type": 1,
 }

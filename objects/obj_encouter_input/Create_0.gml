@@ -1,3 +1,9 @@
+event_inherited();
+
+close = function() {
+	selected_menu = undefined;
+}
+
 button_length = array_length(encouter.buttons);
 
 selected_button = 0;

@@ -26,7 +26,7 @@
   "origin": 4,
   "parent": {
     "name": "Buttons",
-    "path": "folders/__ ENGINE __/Sprites/Encouter/HUD/Buttons.yy",
+    "path": "folders/__Engine__/Sprites/Encouter/HUD/Buttons.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -12,7 +12,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Attack",
-    "path": "folders/__ ENGINE __/Objects/Encouter/Attack.yy",
+    "path": "folders/__Engine__/Objects/Encouter/Attack.yy",
   },
   "parentObjectId": null,
   "persistent": false,

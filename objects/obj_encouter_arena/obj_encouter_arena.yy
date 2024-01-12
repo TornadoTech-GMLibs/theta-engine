@@ -10,7 +10,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Arena",
-    "path": "folders/__ ENGINE __/Objects/Encouter/Components/Arena.yy",
+    "path": "folders/__Engine__/Objects/Encouter/Components/Arena.yy",
   },
   "parentObjectId": {
     "name": "obj_encouter_component",

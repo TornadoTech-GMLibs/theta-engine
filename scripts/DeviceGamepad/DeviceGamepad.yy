@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Devices",
-    "path": "folders/__ ENGINE __/Scripts/Libs/Input/Devices.yy",
+    "path": "folders/__Engine__/Scripts/Libs/Input/Devices.yy",
   },
 }

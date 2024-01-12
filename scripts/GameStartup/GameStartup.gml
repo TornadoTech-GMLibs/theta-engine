@@ -8,6 +8,8 @@ __engine_on_game_startup.connect(function() {
 	
 	scribble_startup();
 	input_startup();
+	
+	audio_group_load_all();
 });
 
 // Forwards an engine event for processing in the game itself

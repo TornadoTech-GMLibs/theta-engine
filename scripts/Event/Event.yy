@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Event",
-    "path": "folders/__ ENGINE __/Scripts/Libs/Event.yy",
+    "path": "folders/__Engine__/Scripts/Libs/Event.yy",
   },
 }

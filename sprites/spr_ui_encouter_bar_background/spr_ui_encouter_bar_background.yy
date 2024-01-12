@@ -26,7 +26,7 @@
   "origin": 3,
   "parent": {
     "name": "Player",
-    "path": "folders/__ ENGINE __/Sprites/Encouter/HUD/Bar/Player.yy",
+    "path": "folders/__Engine__/Sprites/Encouter/HUD/Bar/Player.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

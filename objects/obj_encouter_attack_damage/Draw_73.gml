@@ -1,3 +1,4 @@
+// TODO: Less hardcode, more fields
 scribble(damage == 0 ? missed_text : string(damage))
 	.starting_format("font_hachicro", c_white)
 	.blend(damage == 0 ? missed_color : damage_color, alpha)

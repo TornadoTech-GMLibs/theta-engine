@@ -10,7 +10,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Components",
-    "path": "folders/__ ENGINE __/Objects/Encouter/Components.yy",
+    "path": "folders/__Engine__/Objects/Encouter/Components.yy",
   },
   "parentObjectId": {
     "name": "obj_encouter_component",

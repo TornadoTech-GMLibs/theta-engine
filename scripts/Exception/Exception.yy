@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Exception",
-    "path": "folders/__ ENGINE __/Scripts/Libs/Exception.yy",
+    "path": "folders/__Engine__/Scripts/Libs/Exception.yy",
   },
 }
