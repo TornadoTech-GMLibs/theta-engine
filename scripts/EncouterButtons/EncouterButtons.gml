@@ -60,7 +60,7 @@ function EncouterButtonFight() : EncouterButton() constructor {
 			var bar_draw_x = arena.x - arena.width / 2 + bar_offset_x;
 			var bar_draw_y = arena.y - arena.height / 2 + bar_offset_y + 32 * i;
 			var soul_offset_x = 12;
-			var soul_offset_y = 0;
+			var soul_offset_y = -8;
 			var name = enemy.name;
 		
 			// Draw enemy hp bar
@@ -113,7 +113,7 @@ function EncouterButtonAct() : EncouterButton() constructor {
 	self.bar_offset_x = 16;
 	self.bar_offset_y = 34;
 	self.soul_offset_x = 12;
-	self.soul_offset_y = -4;
+	self.soul_offset_y = -8;
 	
 	/// @param {Id.Instance} hud
 	static update_input = function(hud) {
@@ -290,15 +290,65 @@ function EncouterButtonItem() : EncouterButton() constructor {
 function EncouterButtonMercy() : EncouterButton() constructor {
 	self.sprite = spr_ui_encouter_button_mercy;
 	self.soul_offset = -38;
-	
+	self.soul_sprite = spr_ui_encouter_button_soul;
+		
+	self.selection = 0;
+
 	/// @param {Id.Instance} hud
 	static update_input = function(hud) {
+		var encouter = hud.encouter;
+		var actions = encouter.mercy_actions;
+		
+		if (input_pressed(input_source.skip)) {
+			hud.input.close();
+		}
+		
+		if (input_pressed(input_source.select)) {
+			actions[selection].invoke(encouter);
+			audio_play_sound(snd_ui_select, 0, false);
+		}
+
+		if (input_pressed(input_source.up) && selection > 0) {
+			audio_play_sound(snd_ui_selecting, 0, false);
+			selection--;
+		}
 	
+		if (input_pressed(input_source.down) && selection < array_length(actions) - 1) {
+			audio_play_sound(snd_ui_selecting, 0, false);
+			selection++;
+		}
 	}
 	
 	/// @param {Id.Instance} hud
 	static draw_menu = function(hud) {
+		update_input(hud);
 		
+		var encouter = hud.encouter;
+		var arena = hud.arena;
+		var actions = encouter.mercy_actions;
+	
+		var text = ""
+	
+		for (var i = 0; i < array_length(actions); i++) {
+			var action = actions[i];
+			var name = action.name;
+		
+			var draw_x = arena.x - arena.width / 2 + 28;
+			var draw_y = arena.y - arena.height / 2 + 36 + 32 * i;
+		
+			if (selection == i) {
+				draw_sprite(soul_sprite, 0, draw_x, draw_y - 8);
+				text += "    ";
+			} else {
+				text += "* ";
+			}
+				
+			text += $"{name}\n";
+			scribble(text)
+				.transform(2, 2, 0)
+				.line_height(16, 16)
+				.draw(arena.x - arena.width / 2 + 20, arena.y - arena.height / 2 + 10);
+		} 
 	}
 }
 

@@ -1,8 +1,6 @@
-/// @param {String} name
 /// @param {Struct.Vector2} position
 /// @param {Asset.GMObject} object
-function EncouterEnemy(name, position, object) constructor {
-	self.name = name;
+function EncouterEnemy(position, object) constructor {
 	self.position = position;
 	self.object = object;
 	

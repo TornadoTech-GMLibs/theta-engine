@@ -8,6 +8,9 @@ image_legs = new Image(spr_sans_legs, 0, x, y);
 image_body = new Image(spr_sans_body);
 image_head = new Image(spr_sans_head);
 
+damage_offset_x = 40;
+damage_offset_y = 0;
+
 actions = [
 	new EncouterAction("Check", function(encouter) {
 		encouter.set_dialogue([

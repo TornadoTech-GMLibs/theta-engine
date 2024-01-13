@@ -2,7 +2,7 @@ depth = encouter_depth.arena;
 
 // Prestets
 base_width = 580;
-base_height = 140;
+base_height = 116;
 
 dialogue_width = 100;
 dialogue_height = 100;

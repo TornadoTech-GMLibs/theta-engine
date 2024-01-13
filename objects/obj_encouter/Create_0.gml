@@ -68,9 +68,26 @@ on_enemy_dialogue_end = function() {
 
 #endregion
 
-player = new EncouterPlayer("Tornado", 1, 20, 20, 0, 0, [
+player = new EncouterPlayer("Tornado", 1, 20, 20, 0, 30, [
 	new EncouterItem("Test", 10),
 ]);
+
+// The list of actions displayed in the mercy menu
+mercy_actions = [
+	new EncouterAction("Mercy", function(encouter) {
+		array_foreach(enemies_instance, function(enemy) {
+			enemy.on_mercy();
+		});
+	}),
+	new EncouterAction("Flee", function(encouter) {
+		encouter.set_dialogue([
+			"* You try to run as hard as you can...",
+	        "* But besides, the developers did not foresee such a development of events",
+	        "* You stayed in the battle, [c_red]Хе-хе!",
+			"* [speed, 0.5]B R U H", // Bruh moment
+		]);
+	}),
+];
 
 buttons = [
 	new EncouterButtonFight(),
@@ -78,24 +95,6 @@ buttons = [
 	new EncouterButtonItem(),
 	new EncouterButtonMercy(),
 ];
-
-// The list of actions displayed in the mercy menu
-mercy_actions = [
-	EncouterAction("Mercy", function(encouter) {
-		array_foreach(enemies_instance, function(enemy) {
-			enemy.on_mercy();
-		});
-	}),
-	EncouterAction("Flee", function(encouter) {
-		encouter.set_dialogue([
-			"* You try to run as hard as you can...",
-	        "* But besides, the developers did not foresee such a development of events",
-	        "* You stayed in the battle, [c_red]Хе-хе!",
-			"* [speed: 0.5]B R U H", // Bruh moment
-		]);
-	}),
-];
-
 
 // Print in arena
 text = "* Welcome to ThetaEngine!\n* We make cool things\n* by TornadoTech";
@@ -116,5 +115,5 @@ fight = create_component(obj_encouter_fight); // Component of the current battle
 // room_width = 640;
 // room_height = 480;
 
-arena.set_postion(new Vector2(320, 304));
+arena.set_postion(new Vector2(320, 316));
 arena.set_size_base();

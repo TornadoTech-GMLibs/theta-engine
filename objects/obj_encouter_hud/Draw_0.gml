@@ -16,12 +16,6 @@ for (var i = 0; i < array_length(buttons); i++) {
 	button.draw(id, position, selected);
 }
 
-// Debug
-draw_set_font(font_determination);
-draw_text(50, 70, $"Button: {input.selected_button}");
-draw_text(50, 85, $"Menu: {input.selected_menu}");
-draw_text(50, 100, $"Enemy: {input.selected_enemy}");
-
 // Draw text
 if (encouter.state = encouter_state.selecting) {
 	if (input.selected_menu == undefined) {
@@ -29,7 +23,7 @@ if (encouter.state = encouter_state.selecting) {
 			.starting_format("font_determination", c_white)
 			.transform(2, 2, 0)
 			.wrap(arena.width - text_offset_x)
-			.line_height(18, 18)
+			.line_height(16, 16)
 			.draw(arena.x - arena.width / 2 + text_offset_x, arena.y - arena.height / 2 + text_offset_y, typist);
 	} else {
 		buttons[input.selected_menu].draw_menu(id);

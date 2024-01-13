@@ -9,7 +9,7 @@ buttons = encouter.buttons;
 buttons_offset_x = 40;
 
 text_offset_x = 20;
-text_offset_y = 12;
+text_offset_y = 8;
 
 // Typist for text
 typist = scribble_typist();

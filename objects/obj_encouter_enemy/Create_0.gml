@@ -2,6 +2,9 @@ name = "Enemy";
 hp = 100;
 hp_max = 100;
 
+damage_offset_x = 40;
+damage_offset_y = 0;
+
 defense = 1;
 
 actions = [];

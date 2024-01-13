@@ -45,6 +45,3 @@ draw_sprite_ext(
 	c_white,
 	1
 );
-
-damage_offset_x = 40;
-damage_offset_y = 0;
