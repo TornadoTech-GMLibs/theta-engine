@@ -115,5 +115,5 @@ fight = create_component(obj_encouter_fight); // Component of the current battle
 // room_width = 640;
 // room_height = 480;
 
-arena.set_postion(new Vector2(320, 316));
+arena.set_postion(new Vector2(316, 316));
 arena.set_size_base();

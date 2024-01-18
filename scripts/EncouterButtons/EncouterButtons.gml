@@ -280,9 +280,65 @@ function EncouterButtonItem() : EncouterButton() constructor {
 	self.sprite = spr_ui_encouter_button_item;
 	self.soul_offset = -34;
 	
+	self.selection = 0;
+	
+	/// @param {Id.Instance} hud
+	static update_input = function(hud) {
+		var encouter = hud.encouter;
+		var actions = encouter.mercy_actions;
+		
+		if (input_pressed(input_source.skip)) {
+			hud.input.close();
+		}
+		
+		if (input_pressed(input_source.select)) {
+			encouter.player.items[selection].use(encouter);
+			audio_play_sound(snd_ui_select, 0, false);
+			selection = 0;
+		}
+		
+		
+		if (input_pressed(input_source.left) && selection > 0) {
+			audio_play_sound(snd_ui_selecting, 0, false);
+			selection--;
+		}
+	
+		if (input_pressed(input_source.right) && selection < array_length(encouter.player.items) - 1) {
+			audio_play_sound(snd_ui_selecting, 0, false);
+			selection++;
+		}
+	}
+	
 	/// @param {Id.Instance} hud
 	static draw_menu = function(hud) {
+		update_input(hud);
 		
+		var encouter = hud.encouter;
+		var arena = hud.arena;
+		var player = encouter.player;
+		
+		if (array_length(player.items) == 0) {
+			hud.input.close();
+			return;
+		}
+		
+		var text = "";
+	
+		for (var i = 0; i < array_length(player.items); i++) {
+			if (i != 0) {
+				text += "  ";
+			}
+		
+			text += selection == i ? "   " : "*";
+		}
+	
+		var item = player.items[selection];
+	
+		draw_sprite(spr_ui_encouter_button_soul, 0, arena.x - arena.width / 2 + 28 + 32 * selection, arena.y + arena.height / 2 - 24);
+		scribble(string("* {0}\n  Востонавливает: [c_green]{1} ОЗ\n[c_white]{2}", item.name, item.heal, text))
+			.line_height(16, 16)
+			.transform(2, 2, 0)
+			.draw(arena.x - arena.width / 2 + 20, arena.y - arena.height / 2 + 10);
 	}
 }
 

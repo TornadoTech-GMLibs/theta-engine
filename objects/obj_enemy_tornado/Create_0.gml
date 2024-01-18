@@ -6,6 +6,7 @@ hp_max = 1700;
 
 image_body = new Image(spr_tornado_body, 0, x, y);
 image_head = new Image(spr_tornado_head);
+image_tail = new Image(spr_tornado_tail);
 
 actions = [
 	new EncouterAction("Check", function(encouter) {

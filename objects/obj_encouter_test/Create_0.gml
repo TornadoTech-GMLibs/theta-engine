@@ -2,6 +2,8 @@ event_inherited();
 
 player = new EncouterPlayer("Player", 1, 20, 20, 0, 30, [
 	new EncouterItem("Test", 10),
+	new EncouterItem("Test", 10),
+	new EncouterItem("Test", 10),
 ]);
 
 enemies = [

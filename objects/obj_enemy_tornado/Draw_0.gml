@@ -1,6 +1,20 @@
 /// @desc Animation update
 var wave_y = sin((current_time + 10) * 0.001) * 12;
 
+image_tail.x = image_body.x + 66;
+image_tail.y = image_body.y + 74 + wave_y;
+draw_sprite_ext(
+	image_tail.sprite,
+	image_tail.subming,
+	image_tail.x,
+	image_tail.y,
+	wave(1, 0.7, 3) * image_tail.scale_x,
+	image_tail.scale_y,
+	0,
+	c_white,
+	1
+);
+
 draw_sprite_pos(
 	image_body.sprite, 
 	image_body.subming,
