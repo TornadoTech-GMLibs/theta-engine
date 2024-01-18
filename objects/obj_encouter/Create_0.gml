@@ -97,7 +97,7 @@ buttons = [
 ];
 
 // Print in arena
-text = "* Welcome to ThetaEngine!\n* We make cool things\n* by TornadoTech";
+text = translate_get("Engine.Test");
 
 enemies = [];
 enemies_instance = [];
