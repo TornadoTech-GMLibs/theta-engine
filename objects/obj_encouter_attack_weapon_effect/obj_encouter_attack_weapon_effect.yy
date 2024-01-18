@@ -1,21 +1,18 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_encouter_background",
+  "name": "obj_encouter_attack_weapon_effect",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":7,"eventType":7,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Components",
-    "path": "folders/__Engine__/Objects/Encouter/Components.yy",
+    "name": "Attack",
+    "path": "folders/__Engine__/Objects/Encouter/Attack.yy",
   },
-  "parentObjectId": {
-    "name": "obj_encouter_component",
-    "path": "objects/obj_encouter_component/obj_encouter_component.yy",
-  },
+  "parentObjectId": null,
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -31,7 +28,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_encouter_effects_knife",
+    "path": "sprites/spr_encouter_effects_knife/spr_encouter_effects_knife.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

@@ -3,5 +3,5 @@
 /// @param {Real} amount
 /// @return {Real}
 function approach(val1, val2, amount) {
-	return min(min(val1 + amount, val2), max(val1 - amount, val2));
+	return val1 < val2 ? min(val1 + amount, val2) : max(val1 - amount, val2);
 }

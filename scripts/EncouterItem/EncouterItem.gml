@@ -12,6 +12,12 @@ function EncouterItem(name, heal) constructor {
 			return e == self;
 		}), 1);
 		
-		player.heal(heal);	
+		player.heal(heal);
+		audio_play_sound(snd_heal, 0, false);
+
+		encouter.set_dialogue([
+			$"* Вы съели {name}",
+			$"* Вам стало прикольно"
+		]);
 	}
 }

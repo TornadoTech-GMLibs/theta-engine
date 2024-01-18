@@ -4,6 +4,9 @@ name = "Tornado";
 hp = 1600;
 hp_max = 1700;
 
+damage_effect_offset = new Vector2(60, 40);
+damage_text_offset = new Vector2(40, 0);
+
 image_body = new Image(spr_tornado_body, 0, x, y);
 image_head = new Image(spr_tornado_head);
 image_tail = new Image(spr_tornado_tail);

@@ -18,6 +18,7 @@ destroying = false;
 destroy = function () {
 	destroying = true;
 }
+
 destroy_timesource = time_source_create(time_source_game, 1, time_source_units_seconds, function () {
 	destroy();
 }, [], 1);
