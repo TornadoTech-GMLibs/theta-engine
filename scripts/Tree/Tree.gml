@@ -41,12 +41,12 @@ function Tree(value = undefined) constructor {
 	/// @param {String} key
 	/// @return {Bool}
 	static exists = function(key) {
-		return find(key) != undefined;
+		return file_text_read_all_strings(key) != undefined;
 	}
 	
 	/// @param {String} key
 	static remove = function(key) {
-		var target = find(key);
+		var target = file_text_read_all_strings(key);
 		array_delete(target.parent.list, target.get_index(), 1);
 	}
 	
