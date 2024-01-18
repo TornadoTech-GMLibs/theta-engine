@@ -1,12 +1,11 @@
-/// @param {String} key - Key for search in json
-/// @param {String} default - Returns if result by key not found
+/// @param {String} key
 /// @return {String}
-function translate_get(key = "", _default = key) {
+function translate_get(key = "") {
 	var json = global.__engine_translate_lang_json;
 	
 	if (json == undefined) {
-		show_debug_message($"Trasnlate language not laoded before geting, key: {key}", );
-		return _default;
+		show_debug_message($"Trasnlate language not laoded before geting, key: {key}");
+		return key;
 	}
 	
 	// Return a string value
@@ -19,9 +18,9 @@ function translate_get(key = "", _default = key) {
 			new_path = path[$ keys[i]];
 			path = new_path;
 		}
-	} catch(_error) {
-		return _default;
+	} catch(error) {
+		return key;
 	}
 	
-	return path == undefined ? _default : path;
+	return path == undefined ? key : path;
 }

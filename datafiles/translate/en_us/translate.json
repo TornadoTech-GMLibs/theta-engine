@@ -1,5 +1,20 @@
 {
-  "Engine": {
-    "Test": "* Welcome to ThetaEngine!\n* We make cool things\n* by TornadoTech"
+  "Encouters": {
+    "Example": {
+      "Text": "* Welcome to ThetaEngine!\n* We make cool things\n* by TornadoTech",
+      "MercyActions": {
+        "Flee": [
+          "* You try to run as hard as you can...",
+          "* But besides, the developers did not foresee such a development of events",
+          "* You stayed in the battle, [c_red]Хе-хе!",
+          "* [speed, 0.5]B R U H"
+        ]
+      },
+      "Enemies": {
+        "Tornado": {
+          "Name": "Tornado"
+        }
+      }
+    }
   }
 }

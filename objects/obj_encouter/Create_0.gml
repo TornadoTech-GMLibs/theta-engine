@@ -49,6 +49,12 @@ start_fight = function() {
 	fight.start();
 }
 
+/// @params {String} key
+/// @return {String}
+locale_get = function(key) {
+	return translate_get($"Encouters.{translate_key}.{key}");
+}
+
 #endregion
 #region Events
 
@@ -68,6 +74,8 @@ on_enemy_dialogue_end = function() {
 
 #endregion
 
+translate_key = "Example";
+
 player = new EncouterPlayer("Tornado", 1, 20, 20, 0, 30, [
 	new EncouterItem("Test", 10),
 ]);
@@ -80,12 +88,7 @@ mercy_actions = [
 		});
 	}),
 	new EncouterAction("Flee", function(encouter) {
-		encouter.set_dialogue([
-			"* You try to run as hard as you can...",
-	        "* But besides, the developers did not foresee such a development of events",
-	        "* You stayed in the battle, [c_red]Хе-хе!",
-			"* [speed, 0.5]B R U H", // Bruh moment
-		]);
+		encouter.set_dialogue(locale_get("MercyActions.Flee"));
 	}),
 ];
 
@@ -97,7 +100,7 @@ buttons = [
 ];
 
 // Print in arena
-text = translate_get("Engine.Test");
+text = locale_get("Text");
 
 enemies = [];
 enemies_instance = [];

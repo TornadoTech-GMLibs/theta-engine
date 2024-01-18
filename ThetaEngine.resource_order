@@ -36,6 +36,7 @@
     {"name":"Miscellaneous","order":7,"path":"folders/__Engine__/Scripts/Libs/Scribble/Miscellaneous.yy",},
     {"name":"Quick Functions","order":8,"path":"folders/__Engine__/Scripts/Libs/Scribble/Quick Functions.yy",},
     {"name":"Superfonts","order":9,"path":"folders/__Engine__/Scripts/Libs/Scribble/Superfonts.yy",},
+    {"name":"Translate","order":8,"path":"folders/__Engine__/Scripts/Libs/Translate.yy",},
     {"name":"Utilities","order":4,"path":"folders/__Engine__/Scripts/Libs/Utilities.yy",},
     {"name":"Vector2","order":1,"path":"folders/__Engine__/Scripts/Libs/Vector2.yy",},
     {"name":"Sounds","order":5,"path":"folders/__Engine__/Sounds.yy",},
@@ -66,7 +67,6 @@
     {"name":"Tornado","order":2,"path":"folders/Sprites/Monster/Tornado.yy",},
     {"name":"Tile Sets","order":1,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":7,"path":"folders/Timelines.yy",},
-    {"name":"Translate","order":8,"path":"folders/__Engine__/Scripts/Libs/Translate.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"scribble_font_bake_shader","order":3,"path":"scripts/scribble_font_bake_shader/scribble_font_bake_shader.yy",},
