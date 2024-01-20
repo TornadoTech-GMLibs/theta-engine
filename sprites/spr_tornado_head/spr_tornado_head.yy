@@ -26,7 +26,7 @@
   "origin": 7,
   "parent": {
     "name": "Tornado",
-    "path": "folders/Sprites/Monster/Tornado.yy",
+    "path": "folders/Sprites/Monsters/Tornado.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -19,9 +19,15 @@ enum vector2_dir {
 
 /// @param {Real} x
 /// @param {Real} y
-function Vector2(x = 0, y = 0) constructor {
+function Vector2(x = 0, y = x) constructor {
 	self.x = x;
 	self.y = y;
+	
+	/// @param {Struct.Vector2} vector
+	/// @return {Bool}
+	static equals = function(vector) {
+		return x == vector.x && y == vector.y;
+	}
 
 	/// @return {Id.Instance<Struct.Vector2>}
 	static set_one = function() {
@@ -52,7 +58,7 @@ function Vector2(x = 0, y = 0) constructor {
 	/// @param {Real} x
 	/// @param {Real} y
 	/// @return {Id.Instance<Struct.Vector2>}
-	static sset = function(x, y) {
+	static sset = function(x, y = x) {
 		self.x = x;
 		self.y = y;
 		return self;
@@ -86,7 +92,7 @@ function Vector2(x = 0, y = 0) constructor {
 	/// @param {Real} x
 	/// @param {Real} y
 	/// @return {Id.Instance<Struct.Vector2>}
-	static ssub = function(x, y) {
+	static ssub = function(x, y = x) {
 		self.x -= x;
 		self.y -= y;
 		return self;
@@ -103,7 +109,7 @@ function Vector2(x = 0, y = 0) constructor {
 	/// @param {Real} x
 	/// @param {Real} y
 	/// @return {Id.Instance<Struct.Vector2>}
-	static smulti = function(x, y) {
+	static smulti = function(x, y = x) {
 		self.x *= x;
 		self.y *= y;
 		return self;
@@ -120,7 +126,7 @@ function Vector2(x = 0, y = 0) constructor {
 	/// @param {Real} x
 	/// @param {Real} y
 	/// @return {Id.Instance<Struct.Vector2>}
-	static sdivis = function(x, y) {
+	static sdivis = function(x, y = x) {
 		self.x /= x;
 		self.y /= y;
 		return self;
@@ -132,6 +138,23 @@ function Vector2(x = 0, y = 0) constructor {
 		x /= vector.x;
 		y /= vector.y;
 		return self;
+	}
+	
+	/// @return {Struct.Vector2}
+	static normolize = function() {
+		var len = length();
+		if (len == 0) return self;
+		
+		x /= len;
+		y /= len;
+		return self;
+	}
+	
+	/// @return {Struct.Vector2}
+	static get_normolize = function() {
+		var len = length();
+		if (len == 0) return vector2_zero;
+		return copy().sdivis(len);
 	}
 
 	/// @param {Struct.Vector2} vector
@@ -245,7 +268,7 @@ function Vector2(x = 0, y = 0) constructor {
 	
 	/// @return {Real}
 	static length = function() {
-		return sqr(x * x + y * y);
+		return sqrt(x * x + y * y);
 	}
 	
 	/// @param {Real} min

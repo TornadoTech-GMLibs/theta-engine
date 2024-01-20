@@ -11,8 +11,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Components",
-    "path": "folders/__Engine__/Objects/Encouter/Components.yy",
+    "name": "Dialogue",
+    "path": "folders/__Engine__/Objects/Encouter/Components/Dialogue.yy",
   },
   "parentObjectId": {
     "name": "obj_encouter_component",

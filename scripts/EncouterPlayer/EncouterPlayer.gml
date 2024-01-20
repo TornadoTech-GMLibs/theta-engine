@@ -1,3 +1,4 @@
+/// @param {Id.Instance} encouter
 /// @param {String} name
 /// @param {Real} lv
 /// @param {Real} hp
@@ -5,7 +6,9 @@
 /// @param {Real} defense
 /// @param {Real} damage
 /// @param {Array<Struct.EncouterItem>} items
-function EncouterPlayer(name, lv, hp, hp_max, defense, damage, items) constructor {
+function EncouterPlayer(encouter, name, lv, hp, hp_max, defense, damage, items) constructor {
+	self.encouter = encouter;
+	
 	self.name = name;
 	self.lv = lv;
 	
@@ -32,6 +35,14 @@ function EncouterPlayer(name, lv, hp, hp_max, defense, damage, items) constructo
 		}
 		
 		hp = max(hp - max(abs(damage) - defense, 1), 0);
+		
+		if (hp <= 0) {
+			kill();
+		}
+	}
+	
+	static kill = function() {
+		encouter.on_player_death();
 	}
 	
 	/// @param {Struct.EncouterItem} item

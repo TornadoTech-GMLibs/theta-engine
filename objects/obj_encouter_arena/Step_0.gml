@@ -1,4 +1,6 @@
 // Fucking math
+position = new Vector2(x, y);
+
 _width = lerp(_width, width, 0.3);
 _height = lerp(_height, height, 0.3);
 

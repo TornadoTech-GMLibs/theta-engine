@@ -26,7 +26,7 @@
   "origin": 9,
   "parent": {
     "name": "Sans (Original)",
-    "path": "folders/Sprites/Monster/Sans (Original).yy",
+    "path": "folders/Sprites/Monsters/Sans (Original).yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

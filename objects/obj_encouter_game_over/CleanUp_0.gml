@@ -1,0 +1,1 @@
+time_source_destroy(appearance_delay_time_source);

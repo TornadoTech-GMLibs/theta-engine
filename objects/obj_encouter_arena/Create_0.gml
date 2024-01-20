@@ -33,6 +33,8 @@ height = base_height;
 _width = 1;
 _height = 1;
 
+position = new Vector2(x, y);
+
 /// @param {Struct.Vector2} position
 set_postion = function(position) {
 	x = position.x;

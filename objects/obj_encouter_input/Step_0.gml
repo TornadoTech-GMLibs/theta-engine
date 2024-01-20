@@ -1,3 +1,6 @@
+if (encouter.state != encouter_state.selecting)
+	exit;
+
 if (selected_menu != undefined)
 	exit;
 

@@ -8,8 +8,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Encouters",
-    "path": "folders/Objects/Encouters.yy",
+    "name": "Test",
+    "path": "folders/Objects/Encouters/Test.yy",
   },
   "parentObjectId": {
     "name": "obj_encouter",

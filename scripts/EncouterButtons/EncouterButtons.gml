@@ -16,11 +16,11 @@ function EncouterButtonFight() : EncouterButton() constructor {
 		
 		if (input_pressed(input_source.select)) {
 			encouter.set_state(encouter_state.atacking);
-			enemy_selected = selection;
+			hud.input.close();
 			
 			instance_create(obj_encouter_attack, {
 				encouter: encouter,
-				target: enemy_selected,
+				target: selection,
 			});
 			
 			audio_play_sound(snd_ui_select, 0, false);

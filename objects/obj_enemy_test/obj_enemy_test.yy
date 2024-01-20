@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Encouters",
-    "path": "folders/Objects/Encouters.yy",
+    "name": "Enemies",
+    "path": "folders/Objects/Encouters/Test/Enemies.yy",
   },
   "parentObjectId": {
     "name": "obj_encouter_enemy",

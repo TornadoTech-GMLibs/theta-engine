@@ -1,6 +1,8 @@
 event_inherited();
 
-name = "Tornado";
+translate_key = "Tornado";
+
+name = locale_get("Name");
 hp = 1600;
 hp_max = 1700;
 
@@ -11,12 +13,14 @@ image_body = new Image(spr_tornado_body, 0, x, y);
 image_head = new Image(spr_tornado_head);
 image_tail = new Image(spr_tornado_tail);
 
+dialogue_bubble_scale = new Vector2(3, 3.1);
+dialogue_bubble_offset = new Vector2(120, 60);
+
+current_dialogue = ["Fuck you man"];
+
 actions = [
 	new EncouterAction("Check", function(encouter) {
-		encouter.set_dialogue([
-			"* Example - 5 ATK 5 DEF\n* For test.\n* Page 1.",
-			"* Page 2\n    Lmao",
-		]);
+		encouter.set_dialogue(locale_get("Check"));
 	}),
 	new EncouterAction("Test 1", function(encouter) {
 		encouter.set_dialogue([

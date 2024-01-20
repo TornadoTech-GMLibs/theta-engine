@@ -12,7 +12,11 @@
       },
       "Enemies": {
         "Tornado": {
-          "Name": "Tornado"
+          "Name": "Tornado",
+          "Check": [
+            "* Tornado - 78 AT, 32 DF\n* He always has a plan, be on your guard",
+            "* I'm not kidding, buddy"
+          ]
         }
       }
     }

@@ -33,26 +33,29 @@ if (encouter.state = encouter_state.selecting) {
 // Draw HUD
 var player = encouter.player;
 
+var hud_x = room_width / 2 - 270;
+var hud_y = room_height - 95;
+
 // Name
 scribble(player.name)
 	.starting_format("font_hud", c_white)
-	.draw(40, 385);
+	.draw(hud_x, hud_y);
 
 // LV
 scribble($"LV{player.lv}")
 	.starting_format("font_hud", c_white)
-	.draw(170, 385);
+	.draw(hud_x + 130, hud_y);
 
 // Heatlh label
 scribble("hp")
 	.starting_format("font_hud", c_white)
-	.draw(250, 385);
+	.draw(hud_x + 240, hud_y);
 
 // Heatlh bar
-draw_sprite(spr_ui_encouter_bar_background, 0, 290, 395);
-draw_sprite_field(spr_ui_encouter_bar_hp, 0, 290, 383, player.hp / player.hp_max);
+draw_sprite(spr_ui_encouter_bar_background, 0, hud_x + 280, hud_y + 12);
+draw_sprite_field(spr_ui_encouter_bar_hp, 0, hud_x + 280, hud_y, player.hp / player.hp_max);
 
 // Real health
 scribble($"{player.hp}/{player.hp_max}")
 	.starting_format("font_hud", c_white)
-	.draw(400, 385);
+	.draw(hud_x + 390, hud_y);
