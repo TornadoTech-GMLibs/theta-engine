@@ -134,6 +134,7 @@ background = create_component(obj_encouter_background); // Creates and animates 
 arena = create_component(obj_encouter_arena);
 hud = create_component(obj_encouter_hud); // All graphical display (UI) except dialogs and battles
 fight = create_component(obj_encouter_fight_controller); // Component of the current battle
+audio = create_component(obj_encouter_audio);
 
 // For test
 // room_width = 640;

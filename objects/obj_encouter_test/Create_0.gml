@@ -1,8 +1,10 @@
 event_inherited();
 
+audio.play(snd_core_remix);
+
 translate_key = "Example";
 
-player = new EncouterPlayer(id, "Tesmi", 1, 10, 20, 0, 30, [
+player = new EncouterPlayer(id, "Tesmi", 1, 96, 98, 0, 320, [
 	new EncouterItem("Test", 10),
 	new EncouterItem("Test", 20),
 	new EncouterItem("Test", 30),

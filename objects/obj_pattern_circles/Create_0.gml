@@ -1,6 +1,6 @@
 time = 0;
 
-arena.set_size(125, 125);
+arena.set_size(126, 126);
 parent.create_soul(obj_encouter_fight_soul, {
 	x: arena.x,
 	y: arena.y,

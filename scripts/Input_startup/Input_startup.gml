@@ -28,7 +28,6 @@ function input_startup() {
 
 	// Default binds
 	input_bind(input_source.press, new Key(device_type.mouse, mb_left));
-
 	// input_unbind(input_source.press, new Key(device_type.mouse, mb_left));
 
 	input_bind(input_source.up, [
@@ -57,7 +56,7 @@ function input_startup() {
 	
 	input_bind(input_source.select, [
 		new Key(device_type.keyboard, vk_enter),
-		new Key(device_type.keyboard, "C"),
+		new Key(device_type.keyboard, "Z"),
 	]);
 	
 	input_bind(input_source.skip, [

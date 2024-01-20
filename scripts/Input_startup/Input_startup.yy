@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "Input_startup",
+  "name": "input_startup",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {

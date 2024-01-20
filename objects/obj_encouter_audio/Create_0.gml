@@ -7,9 +7,11 @@ play = function(audio, loop = true) {
 }
 
 pause = function() {
+	if (sound_instance == undefined) return;
 	audio_pause_sound(sound_instance);
 }
 
 stop = function() {
+	if (sound_instance == undefined) return;
 	audio_stop_sound(sound_instance);
 }

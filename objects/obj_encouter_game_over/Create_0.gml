@@ -10,10 +10,12 @@ instance_create(obj_encouter_game_over_soul, {
 image_alpha = 0;
 
 appearance = false;
+selected_button = 0;
 
+audio_instance = undefined;
 appearance_delay_time_source = time_source_create(time_source_game, 3, time_source_units_seconds, function() {
 	appearance = true;
-	audio_play_sound(snd_game_over, 0, true);
+	audio_instance = audio_play_sound(snd_game_over, 0, true);
 }, [], 1);
 
 time_source_start(appearance_delay_time_source);
