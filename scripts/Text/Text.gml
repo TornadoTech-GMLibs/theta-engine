@@ -1,0 +1,3 @@
+function Text() : UIElement() constructor {
+
+}

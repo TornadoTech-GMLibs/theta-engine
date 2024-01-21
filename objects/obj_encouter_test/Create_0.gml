@@ -16,3 +16,10 @@ enemies = [
 create_enemies();
 
 fight_object = obj_encouter_test_fight;
+
+buttons = [
+	new EncouterButtonFight(),
+	new EncouterButtonAct(),
+	new EncouterButtonItem(),
+	new EncouterButtonMercy(),
+];

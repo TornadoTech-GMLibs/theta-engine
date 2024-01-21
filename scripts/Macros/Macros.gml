@@ -22,5 +22,6 @@
 
 #macro mouse_gui_x (device_mouse_x_to_gui(0))
 #macro mouse_gui_y (device_mouse_y_to_gui(0))
+#macro mouse_gui_position (new Vector2(mouse_gui_x, mouse_gui_y))
 
 #macro real_delta_time (delta_time / 1000000)

@@ -1,6 +1,5 @@
-var buttons_y = room_height - 40;
-
 var buttons_x = room_width;
+var buttons_y = room_height - 40;
 
 for (var i = 1; i < array_length(buttons); i++) {
 	buttons_x -= buttons_offset_x + sprite_get_width(buttons[i].sprite);
