@@ -1,2 +1,0 @@
-#macro __engien_encouter_parent obj_encouter
-#macro __engine_encouter_room room_encouter

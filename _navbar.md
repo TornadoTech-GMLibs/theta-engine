@@ -1,0 +1,2 @@
+-   [Releases](https://github.com/TornadoTech-GMLibs/theta-engine/releases)
+-   [Report a bug](https://github.com/TornadoTech-GMLibs/theta-engine/issues)

@@ -1,3 +1,0 @@
-function Canvas() : UIElement() constructor {
-
-}

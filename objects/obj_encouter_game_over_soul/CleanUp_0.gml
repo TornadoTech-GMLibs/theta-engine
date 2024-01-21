@@ -1,2 +1,0 @@
-time_source_destroy(broken_time_source);
-time_source_destroy(shards_time_source);
