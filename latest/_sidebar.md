@@ -1,5 +1,4 @@
 -   [Introduction](README)
--   [Alternatives](alternatives)
 
 ---
 
@@ -12,3 +11,7 @@
 **API Reference**
 
 -   [Configuration](configuration)
+
+**Packets**
+
+-   [Translate](translate)

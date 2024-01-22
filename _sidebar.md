@@ -11,3 +11,7 @@
 **API Reference**
 
 -   [Configuration](configuration)
+
+**Packets**
+
+-   [Translate](translate)
