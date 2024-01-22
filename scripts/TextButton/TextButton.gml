@@ -45,7 +45,7 @@ function TextButton(text, position, callback) : UIElement() constructor {
 	/// @param {Struct.Vector2} vector
 	/// @return {Struct.TextButton}
 	static set_scale = function(vector) {
-		self.scale.set(vector);
+		self.scale = vector;
 		
 		update_size();
 		update_bbox();
@@ -55,7 +55,7 @@ function TextButton(text, position, callback) : UIElement() constructor {
 	/// @param {Struct.Vector2} vector
 	/// @return {Struct.TextButton}
 	static set_position = function(vector) {
-		self.position.set(vector);
+		self.position = vector;
 		
 		update_bbox();
 		return self;
@@ -63,14 +63,10 @@ function TextButton(text, position, callback) : UIElement() constructor {
 	
 	static update_size = function() {
 		self.text_size = new Vector2(
-			string_width(text) * scale.x,
-			string_height(text) * scale.y
-		);
-		
-		self.text_size_half = new Vector2(
-			text_size.x / 2,
-			text_size.y / 2
-		);
+			string_width(text),
+			string_height(text)
+		).multi(scale);
+		self.text_size_half = text_size.sdivis(2);
 	}
 	
 	static update_bbox = function() {
