@@ -8,7 +8,7 @@ if (time % period == 0) {
 		x: position.x,
 		y: position.y,
 		delay: delay,
-		direction: center.copy().sub(position).get_angle(),
+		direction: center.sub(position).get_angle(),
 	});
 	
 	angle += angle_speed;

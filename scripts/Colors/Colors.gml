@@ -10,5 +10,8 @@
 #macro c_fire_brick #b22222
 #macro c_dark_red #8b0000
 
+// Purple
+#macro c_lavender #967bb6
+
 // Brown
 #macro c_sepia #704214

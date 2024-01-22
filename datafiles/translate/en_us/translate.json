@@ -16,6 +16,17 @@
           "Check": [
             "* Tornado - 78 AT, 32 DF\n* He always has a plan, be on your guard",
             "* I'm not kidding, buddy"
+          ],
+          "NoPaint": [
+            "* Unfortunately, you don't have any more paint to color it even more...\n* What a great idea!",
+            "* After all, he now looks like an alternative version of himself from another universe"
+          ],
+          "ThrowPaint": [
+            "* You throw paint in his face...\n* To your surprise it worked, now it's painted"
+          ],
+          "ThrowPaintReact": [
+            "* [speed, 0.3]Um... [speed, 1]Why did you do this?",
+            "* God, now I'm also sticky!\n And [wave][#967bb6]lavender..."
           ]
         }
       }

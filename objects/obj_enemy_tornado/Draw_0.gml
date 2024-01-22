@@ -1,6 +1,7 @@
 /// @desc Animation update
 var wave_y = sin((current_time + 10) * 0.001) * 12;
 
+shader_set_tone(1, color);
 image_body.x = x;
 image_body.y = y;
 
@@ -45,3 +46,4 @@ draw_sprite_ext(
 	c_white,
 	1
 );
+shader_reset();

@@ -18,6 +18,10 @@ dialogue_bubble_offset = new Vector2(120, 60);
 
 current_dialogue = ["Fuck you man"];
 
+// Custom
+color = c_white;
+colored = false;
+
 actions = [
 	new EncouterAction("Check", function(encouter) {
 		encouter.set_dialogue(locale_get("Check"));
@@ -39,6 +43,19 @@ actions = [
 					]);
 				});
 			});
+		});
+	}),
+	
+	new EncouterAction("Throw paint", function(encouter) {
+		if (colored) {
+			encouter.set_dialogue(locale_get("NoPaint"));
+			return;
+		}
+		
+		encouter.set_dialogue(locale_get("ThrowPaint")).invoke_after_destroy(function() {
+			color = c_lavender;
+			colored = true;
+			create_dialogue(locale_get("ThrowPaintReact"));
 		});
 	}),
 ];
