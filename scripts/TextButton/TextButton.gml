@@ -34,6 +34,14 @@ function TextButton(text, position, callback) : UIElement() constructor {
 		return self;
 	}
 	
+	/// @param {Constant.Color} color
+	/// @return {Struct.TextButton}
+	static set_color = function(color, color_hover = self.color_hover) {
+		self.color = color;
+		self.color_hover = color_hover;
+		return self;
+	}
+	
 	/// @param {Struct.Vector2} vector
 	/// @return {Struct.TextButton}
 	static set_scale = function(vector) {
@@ -91,10 +99,5 @@ function TextButton(text, position, callback) : UIElement() constructor {
 			.align(fa_center, fa_middle)
 			.transform(scale.x, scale.y, 0)
 			.draw(position.x, position.y);
-	}
-	
-	static render = function() {
-		update();
-		draw();
 	}
 }
