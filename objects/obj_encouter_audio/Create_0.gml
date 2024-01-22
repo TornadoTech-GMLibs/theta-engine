@@ -15,3 +15,8 @@ stop = function() {
 	if (sound_instance == undefined) return;
 	audio_stop_sound(sound_instance);
 }
+
+resume = function() {
+	if (sound_instance == undefined) return;
+	audio_resume_sound(sound_instance);
+}

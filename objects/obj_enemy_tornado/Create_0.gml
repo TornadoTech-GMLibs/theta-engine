@@ -1,5 +1,9 @@
 event_inherited();
 
+// Imports
+audio = encouter.audio;
+
+// Setiings
 translate_key = "Tornado";
 
 name = locale_get("Name");
@@ -52,10 +56,14 @@ actions = [
 			return;
 		}
 		
+		color = c_lavender;
+		colored = true;
+		
+		audio.pause();
 		encouter.set_dialogue(locale_get("ThrowPaint")).invoke_after_destroy(function() {
-			color = c_lavender;
-			colored = true;
-			create_dialogue(locale_get("ThrowPaintReact"));
+			create_dialogue(locale_get("ThrowPaintReact")).invoke_after_destroy(function() {
+				audio.resume();
+			});
 		});
 	}),
 ];
