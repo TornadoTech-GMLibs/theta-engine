@@ -22,29 +22,35 @@ actions = [
 	new EncouterAction("Check", function(encouter) {
 		encouter.set_dialogue(locale_get("Check"));
 	}),
-	new EncouterAction("Test 1", function(encouter) {
+	
+	// Navid is a scary thing that shows how you can combine dialogues
+	new EncouterAction("Joke", function(encouter) {
 		encouter.set_dialogue([
-			"* Example action \"Test 1\"",
-		]);
-	}),
-	new EncouterAction("Test 2", function(encouter) {
-		encouter.set_dialogue([
-			"* Example action \"Test 2\"",
-		]);
-	}),
-	new EncouterAction("Test 3", function(encouter) {
-		encouter.set_dialogue([
-			"* Example action \"Test 3\"",
-		]);
-	}),
-	new EncouterAction("Test 4", function(encouter) {
-		encouter.set_dialogue([
-			"* Example action \"Test 4\"",
-		]);
-	}),
-	new EncouterAction("Test 5", function(encouter) {
-		encouter.set_dialogue([
-			"* Example action \"Test 5\"",
-		]);
+			"* You told a joke\n* You see the smile on his face",
+		]).invoke_after_destroy(function() {
+			create_dialogue([
+				"* Pfffff",
+			]).invoke_after_destroy(function() {
+				encouter.set_dialogue([
+					"* You don't understand his reaction, this is not a funny joke",
+				]).invoke_after_destroy(function() {
+					create_dialogue([
+						"* Okay, that was pretty funny",
+					]);
+				});
+			});
+		});
 	}),
 ];
+
+kill = function() {
+	create_dialogue([
+		"* Fuck....",
+	]).invoke_after_destroy(function() {
+		encouter.set_dialogue([
+			"* You won, you got pussy",
+		]).invoke_after_destroy(function() {
+			room_goto(room_menu);
+		});
+	});
+}

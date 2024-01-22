@@ -12,7 +12,7 @@ if (invulnerability_frames > 0) {
 
 if (!moveable) exit;
 
-velocity.set_zero();
+velocity = vector2_zero;
 
 var input = new Vector2(
 	input_held(input_source.right) - input_held(input_source.left), 
@@ -21,6 +21,6 @@ var input = new Vector2(
 
 var input_shift = input_held(input_source.skip);
 
-velocity.add(input.multi(movement_speed).smulti(input_shift ? 0.5 : 1));
+velocity = velocity.add(input.multi(movement_speed).smulti(input_shift ? 0.5 : 1));
 
 move_and_collide(velocity.x, velocity.y, obj_encouter_arena_collision);

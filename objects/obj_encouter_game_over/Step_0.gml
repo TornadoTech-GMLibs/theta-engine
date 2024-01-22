@@ -22,7 +22,7 @@ if (input_pressed(input_source.select)) {
 	
 	switch (selected_button) {
 		case 0:
-			game_end();
+			room_goto(room_menu);
 			break;
 		
 		case 1:

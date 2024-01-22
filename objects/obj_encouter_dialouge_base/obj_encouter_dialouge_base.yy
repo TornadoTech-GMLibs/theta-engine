@@ -1,9 +1,11 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_encouter_dialogue_bubble",
+  "name": "obj_encouter_dialouge_base",
   "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":1,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
@@ -12,8 +14,8 @@
     "path": "folders/__Engine__/Objects/Encouter/Components/Dialogue.yy",
   },
   "parentObjectId": {
-    "name": "obj_encouter_dialouge_base",
-    "path": "objects/obj_encouter_dialouge_base/obj_encouter_dialouge_base.yy",
+    "name": "obj_encouter_component",
+    "path": "objects/obj_encouter_component/obj_encouter_component.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
@@ -30,10 +32,7 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": {
-    "name": "spr_encouter_dialogue_bubble",
-    "path": "sprites/spr_encouter_dialogue_bubble/spr_encouter_dialogue_bubble.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": true,
 }

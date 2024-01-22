@@ -29,20 +29,6 @@ function Vector2(x = 0, y = x) constructor {
 		return x == vector.x && y == vector.y;
 	}
 
-	/// @return {Id.Instance<Struct.Vector2>}
-	static set_one = function() {
-		x = 1;
-		y = 1;
-		return self;
-	}
-
-	/// @return {Id.Instance<Struct.Vector2>}
-	static set_zero = function() {
-		x = 0;
-		y = 0;
-		return self;
-	}
-
 	/// @return {Struct.Vector2}
 	static get_negative = function() {
 	    return new Vector2(-x, -y);
@@ -75,69 +61,53 @@ function Vector2(x = 0, y = x) constructor {
 	/// @param {Real} x
 	/// @param {Real} y
 	/// @return {Id.Instance<Struct.Vector2>}
-	static sadd = function(x, y) {
-		self.x += x;
-		self.y += y;
-		return self;
+	static sadd = function(x, y = x) {
+		return new Vector2(self.x + x, self.y + y);
 	}
 	
 	/// @param {Struct.Vector2} vector
 	/// @return {Id.Instance<Struct.Vector2>}
 	static add = function(vector) {
-		x += vector.x;
-		y += vector.y;
-		return self;
+		return new Vector2(x + vector.x, y + vector.y);
 	}
 	
 	/// @param {Real} x
 	/// @param {Real} y
 	/// @return {Id.Instance<Struct.Vector2>}
 	static ssub = function(x, y = x) {
-		self.x -= x;
-		self.y -= y;
-		return self;
+		return new Vector2(self.x - x, self.y - y);
 	}
 
 	/// @param {Struct.Vector2} vector
 	/// @return {Id.Instance<Struct.Vector2>}
 	static sub = function(vector) {
-		x -= vector.x;
-		y -= vector.y;
-		return self;
+		return new Vector2(x - vector.x, y - vector.y);
 	}
 
 	/// @param {Real} x
 	/// @param {Real} y
 	/// @return {Id.Instance<Struct.Vector2>}
 	static smulti = function(x, y = x) {
-		self.x *= x;
-		self.y *= y;
-		return self;
+		return new Vector2(self.x * x, self.y * y);
 	}
 
 	/// @param {Struct.Vector2} vector
 	/// @return {Id.Instance<Struct.Vector2>}
 	static multi = function(vector) {
-		x *= vector.x;
-		y *= vector.y;
-		return self;
+		return new Vector2(x * vector.x, y * vector.y);
 	}
 
 	/// @param {Real} x
 	/// @param {Real} y
 	/// @return {Id.Instance<Struct.Vector2>}
 	static sdivis = function(x, y = x) {
-		self.x /= x;
-		self.y /= y;
-		return self;
+		return new Vector2(self.x / x, self.y / y);
 	}
 	
 	/// @param {Struct.Vector2} vector
 	/// @return {Id.Instance<Struct.Vector2>}
 	static divis = function(vector) {
-		x /= vector.x;
-		y /= vector.y;
-		return self;
+		return new Vector2(x / vector.x, y / vector.y);
 	}
 	
 	/// @return {Struct.Vector2}

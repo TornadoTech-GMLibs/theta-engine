@@ -4,8 +4,6 @@
   "name": "obj_encouter_dialogue",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":12,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
   ],
   "managed": true,
@@ -15,8 +13,8 @@
     "path": "folders/__Engine__/Objects/Encouter/Components/Dialogue.yy",
   },
   "parentObjectId": {
-    "name": "obj_encouter_component",
-    "path": "objects/obj_encouter_component/obj_encouter_component.yy",
+    "name": "obj_encouter_dialouge_base",
+    "path": "objects/obj_encouter_dialouge_base/obj_encouter_dialouge_base.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,

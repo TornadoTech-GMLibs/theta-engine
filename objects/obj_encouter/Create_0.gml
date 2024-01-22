@@ -23,14 +23,22 @@ create_enemies = function() {
 	}
 }
 
+/// @param {Array<String>} dialogue
+/// @return {Id.Instance}
 set_dialogue = function(dialogue) {
-	instance_create(obj_encouter_dialogue, {
+	var instance = instance_create(obj_encouter_dialogue, {
 		encouter: id,
 		dialogue: dialogue,
-		state: state,
+	});
+	
+	instance.invoke_after_destroy(function() {
+		// As usual, we trigger events in the main object so that we can communicate
+		set_previous_state();
 	});
 	
 	set_state(encouter_state.encouter_dialogue);
+	
+	return instance;
 }
 
 /// @param {Real} target
@@ -39,8 +47,13 @@ enemy_hurt = function(target, damage) {
 	enemies_instance[target].hurt(damage);
 }
 
+set_previous_state = function() {
+	set_state(previous_state);
+}
+
 /// @params {Real} index
 set_state = function(index) {
+	previous_state = state;
 	state = index;
 }
 
@@ -64,27 +77,16 @@ on_fight_start = function() {
 
 on_fight_end = function() {
 	set_state(encouter_state.selecting);
-	arena.set_postion(new Vector2(room_width / 2, room_height - 160));
+	
+	arena.set_position_base();
 	arena.set_size_base();
 }
 
 // Attack
 on_attack_end = function() {
-	set_state(encouter_state.enemy_dialogue);
-	arena.set_size_dialogue();
-	
 	array_foreach(enemies_instance, function(enemy) {
 		enemy.on_attack_end();
 	});
-}
-
-// Dialogue
-on_dialogue_end = function(state) {
-	set_state(state);
-}
-
-on_enemy_dialogue_end = function() {
-	start_fight();
 }
 
 on_player_death = function() {
@@ -124,6 +126,7 @@ text = locale_get("Text");
 enemies = [];
 enemies_instance = [];
 
+previous_state = undefined;
 state = encouter_state.selecting;
 
 fight_object = undefined;
@@ -136,9 +139,5 @@ hud = create_component(obj_encouter_hud); // All graphical display (UI) except d
 fight = create_component(obj_encouter_fight_controller); // Component of the current battle
 audio = create_component(obj_encouter_audio);
 
-// For test
-// room_width = 640;
-// room_height = 480;
-
-arena.set_postion(new Vector2(room_width / 2, room_height - 160));
+arena.set_position_base();
 arena.set_size_base();

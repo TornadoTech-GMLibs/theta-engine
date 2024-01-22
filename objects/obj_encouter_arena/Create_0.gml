@@ -55,3 +55,7 @@ set_size_dialogue = function() {
 set_size_base = function() {
 	set_size(base_width, base_height);
 }
+
+set_position_base = function() {
+	set_postion(new Vector2(room_width / 2, room_height - 160));
+}
