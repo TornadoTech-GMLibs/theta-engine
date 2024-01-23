@@ -26,6 +26,7 @@ while (!position.equals(target)) {
 		x: position.x,
 		y: position.y,
 		direction: direction,
+		arena: arena,
 	});
 }
 

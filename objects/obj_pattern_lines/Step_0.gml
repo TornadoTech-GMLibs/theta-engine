@@ -10,6 +10,7 @@ if (time % 60 == 0) {
 		step: 20,
 		direction: 0,
 		projectile: obj_projectile_tornado,
+		arena: arena,
 	});
 
 	instance_create(obj_pattern_line, {
@@ -18,6 +19,7 @@ if (time % 60 == 0) {
 		step: 20,
 		direction: 180,
 		projectile: obj_projectile_tornado,
+		arena: arena,
 	});
 }
 

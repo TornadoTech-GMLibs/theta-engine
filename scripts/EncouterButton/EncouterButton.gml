@@ -6,6 +6,8 @@ function EncouterButton() constructor {
 	static draw = function(hud, position, selected) {
 		if (!visibility) return;
 		
+		selected = selected && hud.encouter.state == encouter_state.selecting;
+		
 		draw_sprite(sprite, selected, position.x, position.y);
 		
 		if (selected) {

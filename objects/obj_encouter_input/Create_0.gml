@@ -1,6 +1,7 @@
 event_inherited();
 
 close = function() {
+	encouter.set_state(encouter_state.selecting);
 	selected_menu = undefined;
 }
 

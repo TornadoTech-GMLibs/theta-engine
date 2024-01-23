@@ -15,4 +15,5 @@ instance_create(obj_pattern_circle_to_center, {
 	radius: 200,
 	delay: 10,
 	projectile: obj_projectile_tornado,
+	arena: arena,
 });

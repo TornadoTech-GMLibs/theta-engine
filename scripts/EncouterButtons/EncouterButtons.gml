@@ -1,5 +1,5 @@
 function EncouterButtonFight() : EncouterButton() constructor {
-	self.sprite = spr_ui_encouter_button_fight;
+	self.sprite = engine_encouter_default_button_fight_sprite;
 	self.soul_offset = -36;
 	
 	self.selection = 0;
@@ -15,9 +15,8 @@ function EncouterButtonFight() : EncouterButton() constructor {
 		}
 		
 		if (input_pressed(input_source.select)) {
-			encouter.set_state(encouter_state.atacking);
 			hud.input.close();
-			
+			encouter.set_state(encouter_state.atacking);
 			instance_create(obj_encouter_attack, {
 				encouter: encouter,
 				target: selection,
@@ -87,7 +86,7 @@ function EncouterButtonFight() : EncouterButton() constructor {
 }
 
 function EncouterButtonAct() : EncouterButton() constructor {
-	self.sprite = spr_ui_encouter_button_act;
+	self.sprite = engine_encouter_default_button_act_sprite;
 	self.soul_offset = -30;
 	self.soul_sprite = spr_ui_encouter_button_soul;
 		
@@ -277,7 +276,7 @@ function EncouterButtonAct() : EncouterButton() constructor {
 }
 
 function EncouterButtonItem() : EncouterButton() constructor {
-	self.sprite = spr_ui_encouter_button_item;
+	self.sprite = engine_encouter_default_button_item_sprite;
 	self.soul_offset = -34;
 	
 	self.selection = 0;
@@ -344,7 +343,7 @@ function EncouterButtonItem() : EncouterButton() constructor {
 
 
 function EncouterButtonMercy() : EncouterButton() constructor {
-	self.sprite = spr_ui_encouter_button_mercy;
+	self.sprite = engine_encouter_default_button_mercy_sprite;
 	self.soul_offset = -38;
 	self.soul_sprite = spr_ui_encouter_button_soul;
 		

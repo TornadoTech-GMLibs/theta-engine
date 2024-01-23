@@ -1,8 +1,8 @@
 // Fucking math
 position = new Vector2(x, y);
 
-_width = lerp(_width, width, 0.3);
-_height = lerp(_height, height, 0.3);
+_width = lerp(_width, size.x, 0.3);
+_height = lerp(_height, size.y, 0.3);
 
 border.up.x = x + dcos(image_angle + 90) * _height / 2;
 border.up.y = y - dsin(image_angle + 90) * _height / 2;
@@ -24,5 +24,5 @@ border.right.y = y - dsin(image_angle) * _width / 2;
 border.right.image_yscale = _height / border_size;
 border.right.image_angle = image_angle;
 
-image_xscale = _width / 16;
-image_yscale = _height / 16;
+image_xscale = _width / sprite_unwidth;
+image_yscale = _height / sprite_unheight;

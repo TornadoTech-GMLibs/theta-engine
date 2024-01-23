@@ -9,6 +9,7 @@ if (time % period == 0) {
 		y: position.y,
 		delay: delay,
 		direction: center.sub(position).get_angle(),
+		arena: arena,
 	});
 	
 	angle += angle_speed;

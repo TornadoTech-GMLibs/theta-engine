@@ -1,0 +1,15 @@
+// Target sprites
+#macro engine_encouter_default_target_sprite spr_ui_encouter_target
+#macro engine_encouter_default_target_pointer_sprite spr_ui_encouter_target_pointer
+
+// Buttons sprites
+#macro engine_encouter_default_button_fight_sprite spr_ui_encouter_button_fight
+#macro engine_encouter_default_button_act_sprite spr_ui_encouter_button_act
+#macro engine_encouter_default_button_item_sprite spr_ui_encouter_button_item
+#macro engine_encouter_default_button_mercy_sprite spr_ui_encouter_button_mercy
+
+// GameOver sprites
+#macro engine_encouter_default_game_over_sprite spr_encouter_game_over
+
+// Arena sprites
+#macro engine_encouter_default_arena_box_sprite spr_encouter_arena_box

@@ -17,7 +17,7 @@ dialogue_bubble_sprite = spr_encouter_dialogue_bubble;
 dialogue_bubble_scale = vector2_one;
 dialogue_bubble_offset = vector2_zero;
 
-current_dialogue = [];
+current_dialogue = ["Lel"];
 
 actions = [];
 
@@ -92,9 +92,6 @@ on_take_damage_callback = function() {
 
 on_take_damage = new Event();
 on_take_damage.connect(on_take_damage_callback);
-
-
-
 
 on_mercy = function() {
 

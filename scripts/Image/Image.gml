@@ -1,4 +1,4 @@
-/// @params {Assets.GMSprite} sprite 
+/// @params {Asset.GMSprite} sprite 
 /// @params {Real} subming 
 /// @params {Real} x
 /// @params {Real} y
@@ -21,6 +21,13 @@ function Image(sprite, subming = 0, x = 0, y = 0) constructor {
 	y4 = 0;
 	scale_x = 1;
 	scale_y = 1;
+	
+	/// @param {Asset.GMSprite} sprite
+	/// @return {Struct.Image}
+	static set_sprite = function(sprite) {
+		self.sprite = sprite;
+		return self;
+	}
 	
 	static set_psotiion = function(x1, y1, x2, y2, x3, y3, x4, y4) {
 		self.x1 = x1;

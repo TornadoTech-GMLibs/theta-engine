@@ -20,6 +20,7 @@ if (input_pressed(input_source.right) && selected_button < button_length - 1) {
 	
 if (input_pressed(input_source.select)) {
 	selected_menu = selected_button;
+	encouter.set_state(encouter_state.in_menu);
 	audio_play_sound(snd_ui_select, 0, false);
 	keyboard_clear(keyboard_lastkey);
 }

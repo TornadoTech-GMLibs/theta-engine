@@ -16,7 +16,7 @@ for (var i = 0; i < array_length(buttons); i++) {
 }
 
 // Draw text
-if (encouter.state = encouter_state.selecting) {
+if (encouter.state = encouter_state.selecting || encouter.state == encouter_state.in_menu) {
 	if (input.selected_menu == undefined) {
 		scribble(encouter.text)
 			.starting_format("font_determination", c_white)

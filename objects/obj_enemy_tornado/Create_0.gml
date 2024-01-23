@@ -20,7 +20,7 @@ image_tail = new Image(spr_tornado_tail);
 dialogue_bubble_scale = new Vector2(3, 3.1);
 dialogue_bubble_offset = new Vector2(120, 60);
 
-current_dialogue = ["Fuck you man"];
+current_dialogue = ["Um..."];
 
 // Custom
 color = c_white;
@@ -36,12 +36,14 @@ actions = [
 		encouter.set_dialogue([
 			"* You told a joke\n* You see the smile on his face",
 		]).invoke_after_destroy(function() {
-			create_dialogue([
+			image_head.set_sprite(colored ? spr_tornado_head_laugh_painted : spr_tornado_head_laugh);
+			create_dialogue([ 
 				"* Pfffff",
 			]).invoke_after_destroy(function() {
 				encouter.set_dialogue([
 					"* You don't understand his reaction, this is not a funny joke",
 				]).invoke_after_destroy(function() {
+					image_head.set_sprite(colored ? spr_tornado_head_painted : spr_tornado_head);
 					create_dialogue([
 						"* Okay, that was pretty funny",
 					]);
@@ -55,6 +57,9 @@ actions = [
 			encouter.set_dialogue(locale_get("NoPaint"));
 			return;
 		}
+		
+		name = $"Lavender {name}";
+		image_head.set_sprite(spr_tornado_head_painted);
 		
 		color = c_lavender;
 		colored = true;
@@ -78,4 +83,23 @@ kill = function() {
 			room_goto(room_menu);
 		});
 	});
+}
+
+dialogue_index = 0;
+dialogues = [
+	[
+		"Fuck me man",
+	],
+];
+
+on_attack_end = function() {
+	
+	if (dialogue_index < array_length(dialogues)) {
+		current_dialogue = dialogues[dialogue_index];
+	} else {
+		current_dialogue = ["You know, it all started so well\nBut damn deadlines, they scare me"];
+	}
+	
+	dialogue_index++;
+	create_dialogue_bubble();
 }
