@@ -26,7 +26,7 @@ mercy_actions = [
 		encouter.set_dialogue(locale_get("MercyActions.Flee"));
 	}),
 	new EncouterAction("Test", function(encouter) {
-		encouter.set_dialogue(locale_get("MercyActions.Flee"));
+		encouter.set_state(encouter_state.cutscene);
 	}),
 ];
 

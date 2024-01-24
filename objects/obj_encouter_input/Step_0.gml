@@ -7,13 +7,13 @@ if (selected_menu != undefined)
 // TODO: Add handler
 // TODO: Sounds to other component
 if (input_pressed(input_source.left) && selected_button > 0) {
-	selected_button--;
+	select_button(selected_button - 1);
 	audio_play_sound(snd_ui_selecting, 0, false);
 	keyboard_clear(keyboard_lastkey);
 }
-	
+
 if (input_pressed(input_source.right) && selected_button < button_length - 1) {
-	selected_button++;
+	select_button(selected_button + 1);
 	audio_play_sound(snd_ui_selecting, 0, false);
 	keyboard_clear(keyboard_lastkey);
 }

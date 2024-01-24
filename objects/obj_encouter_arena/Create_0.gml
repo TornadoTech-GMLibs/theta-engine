@@ -3,9 +3,15 @@ depth = encouter_depth.arena;
 #region Methods
 
 /// @param {Struct.Vector2} position
-set_postion = function(position) {
+set_position = function(position) {
 	x = position.x;
 	y = position.y;
+}
+
+/// @param {Struct.Vector2} position
+add_position = function(position) {
+	x += position.x;
+	y += position.y;
 }
 
 /// @param {Real} width
@@ -31,7 +37,7 @@ set_size_base = function() {
 }
 
 set_position_base = function() {
-	set_postion(new Vector2(room_width / 2, room_height - 160));
+	set_position(new Vector2(room_width / 2, room_height - 160));
 }
 
 #endregion

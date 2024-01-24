@@ -5,4 +5,5 @@ enum encouter_state {
 	enemy_dialogue,
 	atacking,
 	in_menu,
+	cutscene, // Installed by the coder
 }

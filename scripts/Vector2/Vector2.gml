@@ -475,3 +475,13 @@ function Vector2(x = 0, y = x) constructor {
 function is_vector2(struct) {
 	return is_struct(struct) ? instanceof(struct) == "Vector2" : false;
 }
+
+/// @param {Real} angle
+/// @param {Bool} radians
+/// @return {Struct.Vector2}
+function vector2_from_angle(angle, radians = false) {
+	return new Vector2(
+		radians ? cos(angle) : dcos(angle),
+		radians ? sin(angle) : dsin(angle)
+	);
+}

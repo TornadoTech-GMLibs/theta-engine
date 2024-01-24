@@ -10,7 +10,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "MainMenu",
-    "path": "folders/__Engine__/Objects/MainMenu.yy",
+    "path": "folders/Objects/MainMenu.yy",
   },
   "parentObjectId": null,
   "persistent": false,

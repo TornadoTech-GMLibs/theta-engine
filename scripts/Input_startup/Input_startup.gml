@@ -8,6 +8,7 @@ enum input_source {
 	select,
 	skip,
 	invetory,
+	jump,
 }
 
 enum device_type {
@@ -62,6 +63,10 @@ function input_startup() {
 	input_bind(input_source.skip, [
 		new Key(device_type.keyboard, vk_shift),
 		new Key(device_type.keyboard, "X"),
+	]);
+	
+	input_bind(input_source.jump, [
+		new Key(device_type.keyboard, vk_space),
 	]);
 
 	input_bind(input_source.invetory, [

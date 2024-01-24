@@ -18,7 +18,7 @@
   ],
   "parent": {
     "name": "Rooms",
-    "path": "folders/__Engine__/Rooms.yy",
+    "path": "folders/Rooms.yy",
   },
   "parentRoom": null,
   "physicsSettings": {

@@ -6,11 +6,13 @@ if (!variable_instance_exists(id, "arena")) {
 
 depth = encouter_depth.soul;
 
-velocity = vector2_zero;
-movement_speed = new Vector2(3.5);
-moveable = true;
-
 invulnerability_frames = 0;
+
+color = c_white;
+color_hurt = c_dkgray;
+invulnerability_color_time_source = time_source_create(time_source_game, 0.15, time_source_units_seconds, function() {
+	image_blend = image_blend == color ? color_hurt : color;
+}, [], -1);
 
 /// @param {Real} damage
 /// @param {Real} frames
@@ -20,4 +22,5 @@ hurt = function(damage, frames, source) {
 	invulnerability_frames = frames;
 	audio_play_sound(snd_hurt, 0, false);
 	player.hurt(damage);
+	time_source_start(invulnerability_color_time_source);
 }

@@ -1,7 +1,9 @@
 function EncouterButton() constructor {
 	self.sprite = spr_empty;
 	self.soul_offset = 0;
+	
 	self.visibility = true;
+	self.selectable = true;
 	
 	static draw = function(hud, position, selected) {
 		if (!visibility) return;
@@ -19,12 +21,23 @@ function EncouterButton() constructor {
 	static draw_menu = function(hud) {
 		throw new Exception();
 	}
-	
+
+	/// @return {Struct.EncouterButton}
 	static show = function() {
 		visibility = true;
+		return self;		
 	}
 	
+	/// @return {Struct.EncouterButton}
 	static hide = function() {
 		visibility = false;
+		return self;
+	}
+	
+	/// @param {Bool} selectable
+	/// @return {Struct.EncouterButton}
+	static set_selectable = function(selectable) {
+		self.selectable = selectable;
+		return self;
 	}
 }
