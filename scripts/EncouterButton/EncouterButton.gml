@@ -4,6 +4,7 @@ function EncouterButton() constructor {
 	
 	self.visibility = true;
 	self.selectable = true;
+	self.closing = false;
 	
 	static draw = function(hud, position, selected) {
 		if (!visibility) return;
@@ -17,9 +18,21 @@ function EncouterButton() constructor {
 		}
 	}
 	
+	/// @param {Id.Instance} input
+	/// @return {Bool}
+	static avaible = function(input) {
+		return true;
+	} 
+	
 	/// @param {Id.Instance} hud
 	static draw_menu = function(hud) {
 		throw new Exception();
+	}
+	
+	/// @param {Id.Instance} hud
+	static close = function(hud) {
+		hud.input.close();
+		closing = true;
 	}
 
 	/// @return {Struct.EncouterButton}

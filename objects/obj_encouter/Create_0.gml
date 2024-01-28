@@ -98,7 +98,7 @@ on_player_death = function() {
 translate_key = "Example";
 
 player = new EncouterPlayer(id, "Tornado", 1, 20, 20, 0, 30, [
-	new EncouterItem("Test", 10),
+	new EncouterItemHeal("Test", 10),
 ]);
 
 // The list of actions displayed in the mercy menu

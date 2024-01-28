@@ -10,9 +10,17 @@ translate_key = "Example";
 // Player parameters, in order
 // id, player name, level, hp, hp_max, defens, attack
 player = new EncouterPlayer(id, "Tesmi", 1, 96, 98, 0, 320, [
-	new EncouterItem("Test", 10),
-	new EncouterItem("Test", 20),
-	new EncouterItem("Test", 30),
+	new EncouterItemHeal("Тест 1", 10),
+	new EncouterItemHeal("Тест 2", 20),
+	new EncouterItemHeal("Тест случайный", irandom_range(10, 20)),
+	new EncouterItemHurt("Тест -1", 20),
+	new EncouterItemHurt("Битое стекло", 30).set_description("Оно выглядит разбитым"),
+	new EncouterItemSetDamage("Палка отладки", 1000),
+	new EncouterItemSetDefense("Ультра шорты", 1000).set_dialogue([
+		"* Вы одеваете самые моднявые шорты на районе",
+		"* Теперь ваша защита не знает границ",
+	]),
+	new EncouterItemCleaner("Ведро"),
 ]);
 
 // List of actions that will be shown in the mercy menu

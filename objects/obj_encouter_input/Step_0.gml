@@ -18,7 +18,9 @@ if (input_pressed(input_source.right) && selected_button < button_length - 1) {
 	keyboard_clear(keyboard_lastkey);
 }
 	
-if (input_pressed(input_source.select)) {
+var button = buttons[selected_button];
+if (input_pressed(input_source.select) && button.avaible(id)) {
+	button.closing = false;
 	selected_menu = selected_button;
 	encouter.set_state(encouter_state.in_menu);
 	audio_play_sound(snd_ui_select, 0, false);

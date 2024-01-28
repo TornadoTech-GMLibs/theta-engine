@@ -11,11 +11,11 @@ function EncouterButtonFight() : EncouterButton() constructor {
 		var enemies = encouter.enemies_instance;
 		
 		if (input_pressed(input_source.skip)) {
-			hud.input.close();
+			close(hud);
 		}
 		
 		if (input_pressed(input_source.select)) {
-			hud.input.close();
+			close(hud);
 			encouter.set_state(encouter_state.atacking);
 			instance_create(obj_encouter_attack, {
 				encouter: encouter,
@@ -125,7 +125,7 @@ function EncouterButtonAct() : EncouterButton() constructor {
 					enemy = undefined;
 					actions = undefined;
 
-					hud.input.close();
+					close(hud);
 					break;
 					
 				case states.select_action:
@@ -284,16 +284,27 @@ function EncouterButtonItem() : EncouterButton() constructor {
 	/// @param {Id.Instance} hud
 	static update_input = function(hud) {
 		var encouter = hud.encouter;
+		var player = encouter.player;
 		var actions = encouter.mercy_actions;
 		
 		if (input_pressed(input_source.skip)) {
-			hud.input.close();
+			close(hud);
 		}
 		
 		if (input_pressed(input_source.select)) {
-			encouter.player.items[selection].use(encouter);
+			var item = encouter.player.items[selection];
+			
+			item.on_after_use = function(encouter) {
+				if (array_length(encouter.player.items) == 0) {
+					encouter.input.close();
+				}
+			}
+			
 			audio_play_sound(snd_ui_select, 0, false);
+			keyboard_clear(keyboard_lastkey);
 			selection = 0;
+			
+			item.use(encouter);
 		}
 		
 		
@@ -316,10 +327,7 @@ function EncouterButtonItem() : EncouterButton() constructor {
 		var arena = hud.arena;
 		var player = encouter.player;
 		
-		if (array_length(player.items) == 0) {
-			hud.input.close();
-			return;
-		}
+		if (array_length(player.items) == 0) return;
 		
 		var text = "";
 	
@@ -333,12 +341,18 @@ function EncouterButtonItem() : EncouterButton() constructor {
 	
 		var item = player.items[selection];
 	
-		draw_sprite(spr_ui_encouter_button_soul, 0, arena.x - arena.width / 2 + 28 + 32 * selection, arena.y + arena.height / 2 - 24);
-		scribble(string("* {0}\n  Востонавливает: [c_green]{1} ОЗ\n[c_white]{2}", item.name, item.heal, text))
+		draw_sprite(spr_ui_encouter_button_soul, 0, arena.x - arena.width / 2 + 28 + 30 * selection, arena.y + arena.height / 2 - 24);
+		scribble($"* {item.name}\n  {item.description}\n[c_white]{text}")
 			.line_height(16, 16)
 			.transform(2, 2, 0)
 			.draw(arena.x - arena.width / 2 + 20, arena.y - arena.height / 2 + 10);
 	}
+	
+	/// @param {Id.Instance} input
+	/// @return {Bool}
+	static avaible = function(input) {
+		return input.encouter.player.has_items();
+	} 
 }
 
 
@@ -355,7 +369,7 @@ function EncouterButtonMercy() : EncouterButton() constructor {
 		var actions = encouter.mercy_actions;
 		
 		if (input_pressed(input_source.skip)) {
-			hud.input.close();
+			close(hud);
 		}
 		
 		if (input_pressed(input_source.select)) {

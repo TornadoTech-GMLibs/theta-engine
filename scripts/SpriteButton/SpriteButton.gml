@@ -52,9 +52,6 @@ function SpriteButton(sprite, position, callback) : UIElement() constructor {
 	static set_subming = function(subming, subming_hover = self.subming_hover) {
 		self.subming = subming;
 		self.subming_hover = subming_hover;
-
-		update_size();
-		update_bbox();
 		return self;
 	}
 	
@@ -112,8 +109,8 @@ function SpriteButton(sprite, position, callback) : UIElement() constructor {
 	}
 	
 	static draw = function() {
-		draw_set_color(c_red);
-		draw_rectangle(left, top, right, bottom, true);
+		//draw_set_color(c_red);
+		//draw_rectangle(left, top, right, bottom, true);
 		
 		draw_sprite_ext(
 			sprite,

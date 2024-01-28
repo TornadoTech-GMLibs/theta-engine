@@ -2,6 +2,7 @@ event_inherited();
 
 // Imports
 audio = encouter.audio;
+player = encouter.player;
 
 // Setiings
 translate_key = "Tornado";
@@ -70,6 +71,19 @@ actions = [
 				audio.resume();
 			});
 		});
+	}),
+	
+	new EncouterAction("TakeItem", function(encouter) {
+		encouter.set_dialogue([
+			"* You found a [wave]new item![/wave]",
+		]);
+		
+		player.add_item(
+			choose(
+				new EncouterItemHeal("Joker", 10),
+				new EncouterItemHurt("Joker", 10)
+			).set_description("A joker")
+		);
 	}),
 ];
 
