@@ -4,7 +4,6 @@
   "name": "obj_projectile_tornado",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
@@ -13,8 +12,8 @@
     "path": "folders/Objects/Projectiles.yy",
   },
   "parentObjectId": {
-    "name": "obj_encouter_fight_projectile",
-    "path": "objects/obj_encouter_fight_projectile/obj_encouter_fight_projectile.yy",
+    "name": "obj_encouter_fight_projectile_bullet",
+    "path": "objects/obj_encouter_fight_projectile_bullet/obj_encouter_fight_projectile_bullet.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,

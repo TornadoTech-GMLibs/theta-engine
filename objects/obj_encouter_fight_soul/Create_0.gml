@@ -8,6 +8,8 @@ depth = encouter_depth.soul;
 
 invulnerability_frames = 0;
 
+velocity = vector2_zero;
+
 color = c_white;
 color_hurt = c_dkgray;
 invulnerability_color_time_source = time_source_create(time_source_game, 0.15, time_source_units_seconds, function() {

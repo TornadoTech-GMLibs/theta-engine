@@ -12,6 +12,6 @@ instance_create(obj_pattern_projectile_circle_emitter, {
 	period: 75,
 	step: 15,
 	angle_speed: 10,
-	projectile: obj_projectile_tornado,
+	projectile: choose(obj_projectile_tornado_cyan, obj_projectile_tornado_orange),
 	arena: arena,
 });

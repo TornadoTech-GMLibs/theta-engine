@@ -1,6 +1,5 @@
 event_inherited();
 
-velocity = vector2_zero;
 movement_speed = new Vector2(2);
 moveable = true;
 jump_force = 30;

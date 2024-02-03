@@ -10,8 +10,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Fight",
-    "path": "folders/__Engine__/Objects/Encouter/Fight.yy",
+    "name": "Soul",
+    "path": "folders/__Engine__/Objects/Encouter/Fight/Soul.yy",
   },
   "parentObjectId": {
     "name": "obj_encouter_fight_element",
