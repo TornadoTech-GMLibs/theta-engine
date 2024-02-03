@@ -1,17 +1,16 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_encouter_fight_soul",
+  "name": "obj_encouter_fight_projectile_destroyer",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":12,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Soul",
-    "path": "folders/__Engine__/Objects/Encouter/Fight/Soul.yy",
+    "name": "Projectile",
+    "path": "folders/__Engine__/Objects/Encouter/Fight/Projectile.yy",
   },
   "parentObjectId": {
     "name": "obj_encouter_fight_element",
@@ -32,10 +31,7 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": {
-    "name": "spr_encouter_fight_soul",
-    "path": "sprites/spr_encouter_fight_soul/spr_encouter_fight_soul.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": true,
 }

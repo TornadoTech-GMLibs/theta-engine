@@ -60,6 +60,7 @@ function SpriteButton(sprite, position, callback) : UIElement() constructor {
 	static set_scale = function(vector) {
 		self.scale = vector;
 
+		update_origin();
 		update_size();
 		update_bbox();
 		return self;
@@ -79,7 +80,7 @@ function SpriteButton(sprite, position, callback) : UIElement() constructor {
 		self.sprite_origin = new Vector2(
 			sprite_get_xoffset(sprite),
 			sprite_get_yoffset(sprite)
-		);
+		).multi(scale);
 	}
 	
 	static update_size = function() {
@@ -92,11 +93,11 @@ function SpriteButton(sprite, position, callback) : UIElement() constructor {
 	}
 	
 	static update_bbox = function() {
-		self.left = position.x - sprite_origin.x * scale.x;
-		self.right = position.x + sprite_origin.x * scale.x;
-		
-		self.top = position.y - sprite_origin.y * scale.y;
-		self.bottom = position.y + sprite_origin.y * scale.y;
+		self.left = position.x - sprite_origin.x;
+		self.right = left + sprite_size.x;
+
+		self.top = position.y - sprite_origin.y;
+		self.bottom = top + sprite_size.y;
 	}
 	
 	static update = function() {
@@ -108,9 +109,10 @@ function SpriteButton(sprite, position, callback) : UIElement() constructor {
 		}
 	}
 	
+	
 	static draw = function() {
-		//draw_set_color(c_red);
-		//draw_rectangle(left, top, right, bottom, true);
+		// draw_set_color(c_red);
+		// draw_rectangle(left, top, right, bottom, true);
 		
 		draw_sprite_ext(
 			sprite,

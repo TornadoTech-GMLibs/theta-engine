@@ -2,6 +2,22 @@ event_inherited();
 
 if (!variable_instance_exists(id, "arena")) {
 	arena = noone;
+	throw new NullReferenceException();
+}
+
+if (!variable_instance_exists(id, "encouter")) {
+	encouter = noone;
+	throw new NullReferenceException();
+}
+
+if (!variable_instance_exists(id, "player")) {
+	player = noone;
+	throw new NullReferenceException();
+}
+
+if (!variable_instance_exists(id, "fight")) {
+	fight = noone;
+	throw new NullReferenceException();
 }
 
 depth = encouter_depth.soul;

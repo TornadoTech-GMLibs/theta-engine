@@ -1,9 +1,10 @@
 time = 0;
 
 arena.set_size(126, 126);
-parent.create_soul(obj_encouter_fight_soul_blue, {
+parent.create_soul(obj_encouter_fight_soul_green, {
 	x: arena.x,
 	y: arena.y,
+	image_angle: 90,
 });
 
 instance_create(obj_pattern_projectile_circle_emitter, {
