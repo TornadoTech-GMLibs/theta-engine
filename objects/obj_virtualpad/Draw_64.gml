@@ -1,0 +1,5 @@
+draw_sprite_ext(spr_z_button, keyboard_check(ord("Z")), zx, zy, button_scale, button_scale, 0, c_white, controls_opacity)
+draw_sprite_ext(spr_x_button, keyboard_check(ord("X")), xx, xy, button_scale, button_scale, 0, c_white, controls_opacity)
+draw_sprite_ext(spr_c_button, keyboard_check(ord("C")), cx, cy, button_scale, button_scale, 0, c_white, controls_opacity)
+draw_sprite_ext(spr_joybase, joystick_type, analog_posx, analog_posy, analog_scale, analog_scale, 0, c_white, controls_opacity)
+draw_sprite_ext(spr_joystick, joystick_type, analog_center_x, analog_center_y, analog_scale, analog_scale, 0, c_white, controls_opacity)
