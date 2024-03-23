@@ -1,3 +1,5 @@
+analog_posx = window_get_width() * 0.05
+analog_posy = window_get_height() * 0.5
 virtual_key_zp = virtual_key_add(zx, zy, (27 * button_scale), (29 * button_scale), 125)
 virtual_key_xp = virtual_key_add(xx, xy, (27 * button_scale), (29 * button_scale), 124)
 virtual_key_cp = virtual_key_add(cx, cy, (27 * button_scale), (29 * button_scale), 94)

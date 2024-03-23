@@ -3,5 +3,5 @@ function scr_getdevice(){
 	{
 		return 1; //Мобильные устройства
 	}
-	return 0; //Компьютеры
+	return 1; //Компьютеры
 }

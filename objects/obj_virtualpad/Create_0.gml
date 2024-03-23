@@ -7,19 +7,19 @@ if(variable_global_exists("virtualpadcreated"))
 	instance_destroy()
 }
 global.virtualpadcreated = 1
-zx = 800
-zy = 240
-xx = 800
-xy = 320
-cx = 800
-cy = 400
-button_scale = 2.5
-analog_scale = 3.3
+zx = 0
+zy = 0
+xx = 0
+xy = 0
+cx = 0
+cy = 0
+button_scale = 3;
+analog_scale = 3;
+analog_center_x = 0
+analog_center_y = 0
 analog_posx = 50
 analog_posy = 270
 analog_edit_selected = 0
-analog_center_x = (analog_posx + (((59 * analog_scale) / 2) - ((41 * analog_scale) / 2)))
-analog_center_y = (analog_posy + (((59 * analog_scale) / 2) - ((41 * analog_scale) / 2)))
 arrowkeys_area_size = 19.675
 arrowkeys_back_area_size = 45
 joystick_type = 0
